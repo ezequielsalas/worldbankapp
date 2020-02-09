@@ -1,0 +1,179 @@
+:root {
+    --cMain: #233C90;
+    --bgMain: #F6F6F8;
+}
+
+body {
+    background-color: var(--bgMain) !important;
+}
+
+.app-container {
+    display: flex;
+    min-height: 100%;
+    /*font-family: sans-serif;*/
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+
+.app-container h1, .app-container .h1 {
+    color: var(--cMain);
+    font-size: 2.1rem;
+}
+
+h4 {
+    color: #999;
+}
+
+
+.app-body {
+    margin-top: 45px;
+    flex-grow: 1;
+
+    margin-left: 5%;
+    margin-right: 5%;
+    /*background-color: beige;*/
+}
+
+.app-button-bar {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /*background-color: red;*/
+}
+
+.app-body h1 {
+
+}
+
+.app-button-bar > div {
+
+}
+
+.app-button-bar > div label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.app-button-bar > div .switch {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+/* Data Table */
+.react-bootstrap-table {
+    background-color: transparent;
+}
+
+.react-bootstrap-table thead {
+    background-color: #EBEDFB;
+}
+
+.react-bootstrap-table .table th {
+    border: none;
+    color: var(--cMain);
+    text-transform: uppercase;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.react-bootstrap-table .table td {
+    border-top: none;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #90989E;
+}
+
+.react-bootstrap-table .table thead th:first-child,
+.react-bootstrap-table .table td:first-child {
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding-left: 30px;
+}
+
+.react-bootstrap-table .table thead th:last-child,
+.react-bootstrap-table .table td:last-child {
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomright: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding-right: 30px;
+}
+
+.react-bootstrap-table .table tbody tr {
+}
+.react-bootstrap-table .table tbody tr + tr {
+    border-top: 2px solid #F3F4F7;
+}
+
+/*Toggle button*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
