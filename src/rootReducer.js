@@ -1,13 +1,13 @@
 
-import economy from './modules/countrydata';
+import countrydata from './modules/countrydata';
 import { combineReducers } from 'redux';
 
 export const initialState = {
-    ...economy.reducers.initialState,
+    ...countrydata.reducers.initialState,
 };
 
 const appReducer = combineReducers({
-    countryData: economy.reducers.countryDataReducer,
+    countryData: countrydata.reducers.countryDataReducer,
 });
 
 export default (state, action) => {

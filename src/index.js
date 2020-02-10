@@ -4,14 +4,14 @@ import './index.css';
 import App from './App';
 import {Provider} from 'react-redux'
 import * as serviceWorker from './serviceWorker';
-import configureStore from './store';
+import getStore from './store';
 import {
     BrowserRouter as Router,
     Route,
 } from "react-router-dom";
 //import economy from './modules/countrydata';
 // const {BillingPlansContainer, BillingPlanChangeContainer, ChangeCard} = countrydata.components;
-const store = configureStore();
+const store = getStore();
 
 
 ReactDOM.render(
