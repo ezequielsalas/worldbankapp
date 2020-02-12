@@ -9,8 +9,7 @@ import {
     BrowserRouter as Router,
     Route,
 } from "react-router-dom";
-//import economy from './modules/countrydata';
-// const {BillingPlansContainer, BillingPlanChangeContainer, ChangeCard} = countrydata.components;
+
 const store = getStore();
 
 

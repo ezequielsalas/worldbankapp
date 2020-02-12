@@ -7,31 +7,16 @@ body {
     background-color: var(--bgMain) !important;
 }
 
-
-
-
-
 .app-body {
     margin-top: 45px;
     flex-grow: 1;
-
-    margin-left: 5%;
-    margin-right: 5%;
-    /*background-color: beige;*/
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .app-button-bar {
     margin-top: 50px;
     margin-bottom: 50px;
-    /*background-color: red;*/
-}
-
-.app-body h1 {
-
-}
-
-.app-button-bar > div {
-
 }
 
 .app-button-bar > div label {

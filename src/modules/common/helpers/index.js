@@ -4,7 +4,6 @@ export const GET = 'GET', PATCH = 'PATCH';
 
 const request = (url, body = {}, method = GET, sendAsJson = true) => {
 
-
     const headers = new Headers({
         'Content-Type': 'application/x-www-form-urlencoded',
         'X-Requested-With': 'XMLHttpRequest'
@@ -25,7 +24,7 @@ const request = (url, body = {}, method = GET, sendAsJson = true) => {
 
     return fetch(new Request(`${requestUrl.pathname()}${method === GET ? requestUrl.search() : ''}`, requestOptions))
         .then(response => {
- 
+
             const httpCode = response.status;
             if (httpCode === 401 || httpCode === 403 || httpCode === 404) {
                 console.error("Error: "+httpCode)
