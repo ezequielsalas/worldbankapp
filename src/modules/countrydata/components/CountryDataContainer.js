@@ -42,7 +42,7 @@ class CountryDataContainer extends React.Component {
 
 
     handleTableChange = (type, { data, cellEdit: { rowId, dataField, newValue } }) => {
-
+        
         setTimeout(() => {
             if (newValue === '' ) {
                 return
@@ -58,7 +58,6 @@ class CountryDataContainer extends React.Component {
 
             this.props.dispatch(updateCountryData(rowId,{[dataField]:newValue}))
             this.props.dispatch(setCountryData(dataSet));
-
         }, 500);
     }
 
@@ -81,7 +80,7 @@ class CountryDataContainer extends React.Component {
                     country: data.country,
                     indicator: data.indicator,
                     year: data.year,
-                    value: data.value.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+                    value: parseFloat(data.value)
                 })
             );
 

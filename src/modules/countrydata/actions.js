@@ -14,7 +14,6 @@ export const getCountryData = () => {
 export const loadDropDown = () => {
     return dispatch =>
         request("load_dropdown").then(response  =>{
-            debugger;
                 dispatch({
                     type: types.SET_DROPDOWN_DATA,
                     dropdownData: response

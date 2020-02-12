@@ -41,7 +41,7 @@ class EditableCountryTable extends React.Component {
             filter: textFilter(),
             sort: true,
             validator: (newValue, row, column) => {
-                if (isNaN(newValue)) {
+                if (isNaN(newValue.replace(/,/g,''))) {
                     return {
                         valid: false,
                         message: 'Year should be numeric'
@@ -60,8 +60,11 @@ class EditableCountryTable extends React.Component {
             text: 'Most Recent Value',
             filter: textFilter(),
             sort: true,
+            formatter: cell => `${cell}`.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+            ,
             validator: (newValue, row, column) => {
-            if (isNaN(newValue)) {
+
+            if (isNaN(newValue.replace(/,/g,''))) {
                 return {
                     valid: false,
                     message: 'Value should be numeric'
