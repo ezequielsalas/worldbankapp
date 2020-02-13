@@ -70,7 +70,10 @@ class CountryDataContainer extends React.Component {
 
             let dataChart = this.transformCountryDataToChartDataSet(this.props.countryData);
 
-            currentComponent = <LineChart thousands="," decimal="." data={dataChart}/>
+            currentComponent = (<div>
+                <div className="chart-note">Raw unfiltered data. But you can click the countries!</div>
+                <LineChart thousands="," decimal="." data={dataChart}/>
+                </div>)
         } else {
             let dataTable = [];
 

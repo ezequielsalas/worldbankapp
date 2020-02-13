@@ -142,4 +142,9 @@ input:checked + .slider:before {
 
 .table-note{
     color: lightgray;
+    margin-bottom: 10px;
+}
+
+.chart-note{
+    text-align: center;
 }
